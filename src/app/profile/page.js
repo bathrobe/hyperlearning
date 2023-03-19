@@ -4,8 +4,6 @@ import { redirect } from 'next/navigation';
 import SignOut from 'src/components/SignOut';
 import createClient from 'src/lib/supabase-server';
 
-import DataTable from '../../components/DataTable';
-
 export const revalidate = 0;
 export default async function Profile() {
   const supabase = createClient();
