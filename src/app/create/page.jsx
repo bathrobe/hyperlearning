@@ -10,15 +10,12 @@ export default function UploadPdf() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log('submitted');
+    // const formData = new FormData();
+    // formData.append('file', file);
 
-    const formData = new FormData();
-    formData.append('file', file);
-
-    const response = await fetch('/api/process_pdf', {
-      method: 'POST',
-      body: formData,
-    });
-
+    const response = await fetch('/api/hello');
+    console.log('get req', response);
     const extractedContent = await response.json();
     console.log(extractedContent);
   };
